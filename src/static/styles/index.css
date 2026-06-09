@@ -1,0 +1,107 @@
+:root {
+    --bg-header: lightgreen;
+    --bg-main: linear-gradient(150deg, lightpink, lightblue);
+    --fg-nav-a: rgb(0, 0, 129);
+    --bg-footer: rgb(255, 202, 111);
+    --fg-footer: rgb(61, 0, 102);
+}
+
+body {
+    margin: 0px;
+}
+
+header h1 {
+    font-size: 58px;
+    margin: 0px;
+}
+
+.small--logo {
+    font-size: 28px;
+}
+
+header {
+    padding: 60px 15% 24px 5%;
+    background: var(--bg-header);
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 30%;
+}
+
+nav a {
+    font-size: 20px;
+    color: var(--fg-nav-a);
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition-duration: 0.7s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+nav a:hover {
+    border-bottom: 2px solid var(--fg-nav-a);
+    border-inline-start: 15px;
+}
+
+main {
+    background: var(--bg-main);
+    padding: 24px 5%;
+}
+
+footer {
+    background: var(--bg-footer);
+    color: var(--fg-footer);
+}
+
+/* projects */
+
+.projects-h {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.proud {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.proud a article {
+    color: black;
+}
+.less-proud {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.less-proud a article {
+    color: black;
+}
+
+main.projects section a {
+    border: 2px solid black;
+    padding: 24px;
+    text-decoration: none;
+    width: 15%;
+    min-height: 160px;
+    max-height: 320px;
+}
+
+.projects section {
+    gap: 24px;
+}
+
+.endora-panel {
+    width: 0px;
+    height: 0px;
+    visibility: collapse;
+    display: none;
+}

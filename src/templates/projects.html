@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>danb1551 | pages/portfolio</title>
+    <script src="{{  url_for('static', filename='scripts/index.js')  }}"></script>
+    <link rel="stylesheet" href="{{  url_for('static', filename='styles/index.css')  }}">
+</head>
+<body onload="init()">
+    <header>
+        <h1>'Welcome'<span class="small--logo"> - danb1551</span></h1>
+        <nav>
+            <a href="/">Main</a>
+            <a href="/cv">Curriculum vitae</a>
+            <a href="/projects">Projects</a>
+        </nav>
+    </header>
+    <main class="projects">
+        <section class="projects-h">
+            <h1>Projects</h1>
+            <h2>Proud projects</h2>
+        </section>
+        <section class="proud">
+            <a href="https://github.com/danb1551/canvalib">
+                <article>
+                    <h1>canvalib</h1>
+                    <p>Create canvas in terminal with python package</p>
+                </article>
+            </a>
+            <a href="https://github.com/danb1551/TdA26-MamutRachal">
+                <article>
+                    <h1>Tour de App 26</h1>
+                    <p>Result of participation in Tour de App competition</p>
+                </article>
+            </a>
+            <a href="https://github.com/danb1551/css-grid-helper">
+                <article>
+                    <h1>CSS grid helper</h1>
+                    <p>Rendering boxes in terminal (to help me imagine grid working in CSS)</p>
+                </article>
+            </a>
+            <a href="https://github.com/danb1551/pymine-bot">
+                <article>
+                    <h1>PyMine bot</h1>
+                    <p>Choosing best tool to mine basic blocks in minecraft</p>
+                </article>
+            </a>
+            <a href="https://github.com/danb1551/files-commander">
+                <article>
+                    <h1>Files commander</h1>
+                    <p>Simple files commander created in Python language with Tkinter libraly</p>
+                </article>
+            </a>
+            <a href="https://github.com/danb1551/labyrint">
+                <article>
+                    <h1>Labyrint</h1>
+                    <p>Game labyrint created in Godot</p>
+                </article>
+            </a>
+        </section>
+        <!--<section class="projects-h">
+            <h2>Hopeles projects</h2>
+        </section>
+        <section class="less-proud">
+            <a href="https://github.com/danb1551/">
+                <article>
+                    <h1>Labyrint</h1>
+                    <p>Game labyrint created in Godot</p>
+                </article>
+            </a>
+        </section>-->
+    </main>
+    <footer>
+        &copy;<a href="https://github.com/danb1551">danb1551</a>
+    </footer>
+</body>
+</html>
