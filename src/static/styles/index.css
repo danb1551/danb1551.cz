@@ -1,31 +1,31 @@
 :root {
-    --bg-header: lightgreen;
+    --bg-header: #1F1F21;
+    --fg-header: #F2F2F2;
     --bg-main: linear-gradient(150deg, lightpink, lightblue);
-    --fg-nav-a: rgb(0, 0, 129);
     --bg-footer: rgb(255, 202, 111);
     --fg-footer: rgb(61, 0, 102);
 }
 
 body {
     margin: 0px;
-}
-
-header h1 {
-    font-size: 58px;
-    margin: 0px;
-}
-
-.small--logo {
-    font-size: 28px;
+    background:
+        radial-gradient(farthest-corner at 0px 0px, #FFF4CA 0%, white 100%);
 }
 
 header {
-    padding: 60px 15% 24px 5%;
+    margin: 16px;
+    padding: 16px;
     background: var(--bg-header);
+    color: var(--fg-header);
     display: flex;
     flex-direction: row;
     align-items: baseline;
     justify-content: space-between;
+    border-radius: 12px;
+}
+
+h1 {
+    margin: 0;
 }
 
 nav {
@@ -37,7 +37,7 @@ nav {
 
 nav a {
     font-size: 20px;
-    color: var(--fg-nav-a);
+    color: var(--fg-header);
     text-decoration: none;
     border-bottom: 2px solid transparent;
     transition-duration: 0.7s;
@@ -45,8 +45,23 @@ nav a {
 }
 
 nav a:hover {
-    border-bottom: 2px solid var(--fg-nav-a);
+    border-bottom: 2px solid var();
     border-inline-start: 15px;
+}
+
+.header--contact a {
+    border: #39393b 2px solid;
+    border-radius: 8px;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 64px;
+}
+
+.header--contact a img {
+    width: 24px;
+    height: 24px;
 }
 
 main {

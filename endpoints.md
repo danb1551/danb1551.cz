@@ -3,15 +3,19 @@
 
 ## / - [GET]
 
- - index
+ - home page
+
+## /services - [GET]
+
+ - services page
 
 ## /projects - [GET]
 
- - projects
+ - projects page
 
-## /cv - [GET]
+## /portfolio - [GET]
 
- - curricullum vitae
+ - page with portfolio
 
 ## /health - [GET]
 

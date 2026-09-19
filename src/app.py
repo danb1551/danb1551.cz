@@ -3,22 +3,25 @@ import redis
 import os
 
 def create_app() -> Flask:
+    USE_REDIS = True
     app = Flask(__name__)
     app.secret_key = os.getenv("SECRET_KEY")
 
-    redis_cache = redis.Redis(
-        host="redis",
-        decode_responses=True
-    )
-    redis_cache.incr("visits")
+    if USE_REDIS:
+        redis_cache = redis.Redis(
+            host="redis",
+            decode_responses=True
+        )
+        redis_cache.incr("visits")
 
-    @app.errorhandler(404)
+    @app.errorhandler(404) # type: ignore
     def NotFound():
         return render_template("errors/404.html"), 404
 
     @app.route("/", methods=["GET"])
     def home():
-        redis_cache.incr("visits")
+        if USE_REDIS:
+            redis_cache.incr("visits")
         return render_template("index.html"), 200
 
     @app.route("/projects", methods=["GET"])
@@ -41,7 +44,7 @@ def create_app() -> Flask:
     def lookup():
         return jsonify({'lookup': redis_cache.get("visits")}), 200
 
-    @app.route("/login")
+    @app.route("/login") # type: ignore
     def login():
         if request.method == "GET":
             return render_template("login.html")
@@ -49,5 +52,10 @@ def create_app() -> Flask:
         elif request.method == "POST" and request.form.get("username") == os.getenv("ADMIN_USERNAME") and request.form.get("password") == os.getenv("ADMIN_PASSWORD"):
             session["username"] = "ADMIN"
             return "success - loged in", 200
+
+    @app.route("/admin")
+    def admin():
+        return render_template("admin/index.html")
+        
 
     return app
