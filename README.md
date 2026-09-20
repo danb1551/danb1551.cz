@@ -14,6 +14,11 @@
  - How to contact me information
  - at /lookup endpoint returning number of visitors (only that visited / (root) endpoint)
 
+## Dependencies
+
+ - docker
+ - compose plugin installed in docker
+
 ## How to run
 
 ###### well, that page is with information of me so you must change the text in HTML

@@ -1,8 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
-    --bg: white;
+    --bg: radial-gradient(
+        circle at 27% 350px,
+        #F3ECA9 0%,
+        #fffefc 30%,
+        white 100%
+    );
     --bg-header: #1F1F21;
     --fg-header: #F2F2F2;
-    --bg-main: white;
+    --bg-main: transparent;
     --bg-footer: rgb(255, 202, 111);
     --fg-footer: rgb(61, 0, 102);
 }
@@ -10,6 +17,8 @@
 body {
     margin: 0px;
     background: var(--bg);
+    background-repeat: no-repeat;
+    font-family: "Roboto", sans-serif;
 }
 
 header {
@@ -76,6 +85,8 @@ nav a:hover, a.active {
 
 
 
+
+
 main {
     background: var(--bg-main);
     padding: 24px 5%;
@@ -95,6 +106,35 @@ main .big-text h2 {
     padding-left: 96px;
     font-weight: lighter;
 }
+
+.me-online {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.me-online h3 {
+    font-size: 24px;
+    font-weight: lighter;
+}
+
+.me-online nav {
+    align-items: center;
+    width: 35%;
+}
+
+.me-online i {
+    width: 24px;
+    color: #1F1F21;
+}
+
+.me-online a {
+    font-size: 24px;
+    color: #1F1F21;
+}
+
+
+
 
 footer {
     background: var(--bg-footer);

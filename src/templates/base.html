@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>danb1551 | pages/portfolio</title>
-    <script src="../static/scripts/index.js"></script>
-    <link rel="stylesheet" href="../static/styles/index.css">
+    <title>{% block title %}danb1551.cz{% endblock %}</title>
+    <script src="{{  url_for('static', filename='scripts/index.js')  }}"></script>
+    <link rel="stylesheet" href="{{  url_for('static', filename='styles/index.css')  }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body onload="init()">
     <header>
         <div class="logo">
-            <h1>Portfolio</h1>
+            <h1>{% block page_name %}Home{% endblock %}</h1>
         </div>
         <nav><!-- class="active"-->
             <a href="/">Home</a>
@@ -19,15 +20,38 @@
             <a href="/portfolio">Portfolio</a>
         </nav>
         <div class="header--contact">
-            <a href="/cv"><img src="../static/img/download-icon.png" alt="download icon">CV</a>
+            <a href="/cv"><img src="{{  url_for('static', filename='img/download-icon.png')  }}" alt="download icon">CV</a>
             <a href="/contact">Contact</a>
         </div>
     </header>
     <main>
+        {% block main %}
         <div class="big-text">
             <h1>Daniel Balcar</h1>
             <h2>- Full-stack Developer</h2>
         </div>
+        <div class="me-online">
+            <h3>Follow me on-line:</h3>
+            <nav>
+                <a href="https://discord.com/users/1141264546221269013">
+                    <i class="fa-brands fa-discord"></i>
+                    Discord
+                </a>
+                <a href="https://github.com/danb1551">
+                    <i class="fa-brands fa-github"></i>
+                    Github
+                </a>
+                <a href="https://instagram.com/danik_12sniper">
+                    <i class="fa-brands fa-github"></i>
+                    Instagram
+                </a>
+                <a href="mailto:danielbalcar22@gmail.com">
+                    <i class="fa-brands fa-github"></i>
+                    Instagram
+                </a>
+            </nav>
+        </div>
+        {% endblock %}
     </main>
     <footer>
     </footer>

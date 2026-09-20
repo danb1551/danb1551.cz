@@ -8,6 +8,7 @@ services:
             - 8080:8080
         volumes:
           - /mnt/sda/anime:/anime
+        restart: unless-stopped
     redis:
         image: redis:latest
         container_name: redis

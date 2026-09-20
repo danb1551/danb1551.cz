@@ -24,6 +24,10 @@ def create_app() -> Flask:
             redis_cache.incr("visits")
         return render_template("index.html"), 200
 
+    @app.route("/services", methods=["GET"])
+    def services():
+        return render_template("services.html"), 200
+
     @app.route("/projects", methods=["GET"])
     def projects():
         return render_template("projects.html"), 200
