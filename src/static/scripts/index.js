@@ -7,7 +7,6 @@ let isFocused = true;
 
 function init() {
     startScrolling();
-    removePanel();
 }
 
 function startScrolling() {

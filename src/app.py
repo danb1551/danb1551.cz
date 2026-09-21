@@ -18,6 +18,10 @@ def create_app() -> Flask:
     def NotFound():
         return render_template("errors/404.html"), 404
 
+    @app.route("/favicon.ico")
+    def favicon():
+        return url_for('static', filename="img/favicon.ico")
+
     @app.route("/", methods=["GET"])
     def home():
         if USE_REDIS:
@@ -31,6 +35,10 @@ def create_app() -> Flask:
     @app.route("/projects", methods=["GET"])
     def projects():
         return render_template("projects.html"), 200
+
+    @app.route("/portfolio")
+    def portfolio():
+        return render_template("portfolio.html")
 
     @app.route("/cv", methods=["GET"])
     def cv():
